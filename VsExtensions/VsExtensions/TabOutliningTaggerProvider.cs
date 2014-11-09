@@ -8,11 +8,11 @@ namespace VsExtensions
 	[Export(typeof (ITaggerProvider))]
 	[TagType(typeof (IOutliningRegionTag))]
 	[ContentType("text")]
-	internal sealed class OutliningTaggerProvider : ITaggerProvider
+	internal sealed class TabOutliningTaggerProvider : ITaggerProvider
 	{
 		public ITagger<T> CreateTagger<T>(ITextBuffer buffer) where T : ITag
 		{
-			return buffer.Properties.GetOrCreateSingletonProperty(() => new OutliningTagger(buffer) as ITagger<T>);
+			return buffer.Properties.GetOrCreateSingletonProperty(() => new TabOutliningTagger(buffer) as ITagger<T>);
 		}
 	}
 }

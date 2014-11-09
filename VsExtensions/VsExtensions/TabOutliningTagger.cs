@@ -5,11 +5,11 @@ using Microsoft.VisualStudio.Text.Tagging;
 
 namespace VsExtensions
 {
-	internal sealed class OutliningTagger : ITagger<IOutliningRegionTag>
+	internal sealed class TabOutliningTagger : ITagger<IOutliningRegionTag>
 	{
 		private ITextBuffer _buffer;
 
-		internal OutliningTagger(ITextBuffer buffer)
+		internal TabOutliningTagger(ITextBuffer buffer)
 		{
 			_buffer = buffer;
 		}
@@ -27,7 +27,6 @@ namespace VsExtensions
 
 					if (parent != null && text.StartsWith("\t"))
 						endLine = line;
-					
 
 					if (parent != null && endLine != null && !text.StartsWith("\t"))
 					{

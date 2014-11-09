@@ -6,7 +6,7 @@ namespace VsExtensions
 	internal static class VsExtensionsContentTypeDefinition
 	{
 		[Export]
-		[Name("resources")]
+		[Name("resource-agg")]
 		[BaseDefinition("text")]
 		internal static ContentTypeDefinition ResourcesContentTypeDefinition = null;
 	}

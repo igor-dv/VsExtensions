@@ -67,8 +67,9 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="OutliningTagger.cs" />
-    <Compile Include="OutliningTaggerProvider.cs" />
+    <Compile Include="CommentClassificationFormat.cs" />
+    <Compile Include="TabOutliningTagger.cs" />
+    <Compile Include="TabOutliningTaggerProvider.cs" />
     <Compile Include="VsExtensionsContentTypeDefinition.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
