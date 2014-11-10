@@ -28,7 +28,7 @@ namespace VsExtensions
 					if (parent != null && text.StartsWith("\t"))
 						endLine = line;
 
-					if (parent != null && endLine != null && !text.StartsWith("\t"))
+					if (parent != null && endLine != null && (!text.StartsWith("\t") || string.IsNullOrWhiteSpace(text)))
 					{
 						var snapshot = new SnapshotSpan(parent.End, endLine.End);
 
